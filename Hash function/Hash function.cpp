@@ -44,7 +44,7 @@ public:
             hashNumber++;
             if (hashNumber >= PRIME_SIZE)
             {
-                wcout << '"' << newStr << '"' << L":  не влезло в таблицу (достигнут конец) " << endl;
+                wcout << '"' << newStr << '"' << L":  out of space in table (end) " << endl;
                 return;
             }
         }
@@ -68,7 +68,7 @@ int main()
 
     if (!input.is_open())
     {
-        cout << "Программа не смогла открыть или не нашла input.txt" << endl << "Завершение программы" << endl;
+        cout << " input.txt is missing" << endl << "Closing application" << endl;
         return 1;
     }
 
@@ -106,8 +106,8 @@ int main()
     }
     output.close();
 
-    cout << "Размер таблицы = " << PRIME_SIZE << endl;
-    cout << "Таблица записана в output.txt" << endl;
+    cout << "Table size = " << PRIME_SIZE << endl;
+    cout << "Recorded in output.txt" << endl;
 
     return 0;
 }
